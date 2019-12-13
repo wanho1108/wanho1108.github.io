@@ -36,7 +36,7 @@ $ gem install jekyll bundler
 # Jekyll 설치 확인
 $ jekyll -v
 
-# Jekyll 블로그 설치
+# Jekyll 저장소 폴더에 블로그 설치
 $ jekyll new wanho1108.github.io
 
 # Jekyll 실행
@@ -44,25 +44,9 @@ $ cd wanho1108.github.io
 $ bundle exec jekyll serve
 ```
 
-## 디렉토리 구조 변경하기
-
-설치가 완료되면 아래와 같이 디렉토리 구조가 생성됩니다. 디렉토리 구조에 대한 이해는 [여기](https://jekyllrb-ko.github.io/docs/structure/)를 참고한다.
-
-```
-디렉토리 구조
-```
-
-나는 `SCSS` 및 기타 파일을 사용하기 위해 아래와 같이 디렉토리 구조를 변경했다.
-
-```
-변경된 디렉토리 구조
-```
-
 ## 테마 변경하기
 
-> 지금은 내가 봐도 꾸민 거 하나 없는데 왜 오래 걸린 건지 의문이다.
-
-Jekyll 3.2 버전부터는 [minima](https://github.com/jekyll/minima) 테마가 기본으로 설치된다. 디자인은 자신의 취향에 맞게끔 `HTML`, `CSS`를 수정, 작성하여 변경할 수 있다. 다른 사람의 눈에는 내 블로그가 꾸민 거 하나 없어 보이겠지만 나름 여러 템플릿을 벤치마킹하고 수많은 시간과 고민을 들였다.
+Jekyll 3.2 버전부터는 [minima](https://github.com/jekyll/minima) 테마가 기본으로 설치되며 `bundle show minima` 명령을 통해 설치된 테마의 파일이 어디에 저장되어 있는지 확인 할 수 있다. 테마는 `HTML`, `CSS`를 수정하여 쉽게 변경할 수 있어 자신의 취향에 맞게 변경할 수 있다. 다른 사람의 눈에는 내 블로그가 꾸민 거 하나 없어 초라해 보이겠지만 나름 여러 템플릿을 벤치마킹하고 수많은 고민과 시간을 들였다. 지금 생각해보면 내가 봐도 꾸민 거 하나 없는데 왜 오래 걸린 건지 의문이다.
 
 ### 코드 하이라이트
 
