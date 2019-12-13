@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/*=
+  @group Components
+  @name Footer
+  @author wanho1108 <wanho1108@gmail.com>
+  @since 2019-04-01
+*/
+
+.footer {
+  margin: 1.875em auto 0;
+  text-align: right;
+}
+
+.footer__wrapper {
+  padding: 3.125em 5%;
+}
+
+.footer__copyright {
+  font-size: .875em;
+}

@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/*=
+  @group Components
+  @name Post List
+  @author wanho1108 <wanho1108@gmail.com>
+  @since 2019-04-15
+*/
+
+.post-list {
+  
+}
+
+.post-list__list {
+
+}
+
+.post-list__listitem {
+  position: relative;
+  padding-top: 3.75em;
+  padding-bottom: 3.75em;
+  border-top: 1px solid #dee2e6;
+  
+  &:first-child {
+    border-top: 0 none;
+  }
+}
+
+.post-list__subject {
+  padding-top: .7222em;
+  font-size: 2.25em;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: #2f373f;
+}
+
+.post-list__subject-anchor {
+  cursor: pointer;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    top: 2em;
+    right: 0;
+    bottom: 2em;
+    left: 0;
+  }
+  
+  &:focus,
+  &:hover {
+    opacity: .9;
+    text-decoration: underline;
+  }
+}
+
+.post-list__time {
+  display: inline-block;
+  position: absolute;
+  top: 3.75em;
+  left: 0;
+  // font-size: .875em;
+  text-transform: uppercase;
+}
+
+.post-list__summary {
+  margin-top: .8888em;
+  font-size: 1.125em;
+  color: #495057;
+  line-height: 1.5;
+}

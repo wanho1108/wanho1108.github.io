@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/*=
+  @group Components
+  @name Header
+  @author wanho1108 <wanho1108@gmail.com>
+  @since 2019-03-06
+*/
+
+.header {
+  height: 9.125em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header__wrapper {
+  position: relative;
+  height: inherit;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.header__site-logo {
+  position: absolute;
+  top: 2.6363em;
+  left: 0;
+  font-size: 1.375em;
+  font-weight: 700;
+  color: #212529;
+}
+
+.header__button {
+  position: absolute;
+}
+
+.header__button--history {
+  top: 3.125em;
+  left: 0;
+  width: 2.875em;
+  height: 2.875em;
+  background: url(/assets/image/icon-history-2f373f.svg) no-repeat 50%/100%;
+}
+
+.header__navigation {
+  position: absolute;
+  top: 3.125em;
+  right: 0;
+}
+
+.header__navigation-list {
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.header__navigation-listitem {
+  float: left;
+  margin-left: 10px;
+  
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.header__navigation-anchor {
+  display: block;
+  padding: .75em 1.5625em .9375em;
+  border-radius: 22px;
+  box-sizing: border-box;
+  color: #7e8690;
+  text-align: center;
+  
+  &:hover,
+  &:focus {
+    background-color: $color-light-gray;
+    color: #495057;
+  }
+  
+  &[aria-current="page"] {
+    background-color: $color-light-gray;
+    font-weight: 700;
+    color: #495057;
+  }
+}

@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+/*=
+  @group Components
+  @name Post View
+  @author wanho1108 <wanho1108@gmail.com>
+  @since 2019-03-06
+*/
+
+.post-view {
+  margin-top: 3.75em;
+  margin-bottom: 3.75em;
+}
+
+.post-view__header {
+  position: relative;
+  padding-top: 1.625em;
+  margin-bottom: 3.75em;
+}
+
+.post-view__subject {
+  margin-bottom: .4347em;
+  font-size: 2.875em;
+  font-weight: 700;
+  //color: #343a40;
+  color: #2f373f;
+  letter-spacing: -.01em;
+}
+
+.post-view__time {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+}
+
+.post-view__content {
+  font-size: 1.25em;
+  color: #343a40;
+  
+  h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 1.7em;
+    font-weight: 700;
+
+    &:before {
+      content: 'H2';
+      margin-right: .625em;
+      font-size: .4705em;
+      color: #c2bfbc;
+    }
+  }
+  
+  h3 {
+    margin-top: 1.5715em;
+    margin-bottom: .9642em;
+    font-size: 1.4em;
+    font-weight: 700;
+
+    &:before {
+      content: 'H3';
+      margin-right: .625em;
+      font-size: .5714em;
+      color: #c2bfbc;
+    }
+  }
+  
+  blockquote {
+    padding-right: 1em;
+    padding-left: 1em;
+    border-left: 5px solid #dfe2e5;
+    margin-top: 1em;
+    margin-bottom: 1.4em;
+    
+    blockquote {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    p,
+    ul,
+    ol {
+      margin-top: .5em;
+      margin-bottom: .7em;
+    }
+  }
+
+  strong {
+
+    &:before {
+      content: '*';
+      font-size: .8em;
+      color: #c2bfbc;
+    }
+
+    &:after {
+      content: '*';
+      font-size: .8em;
+      color: #c2bfbc;
+    }
+  }
+  
+  em {
+    font-style: italic;
+
+    &:before {
+      content: '/';
+      font-size: .8em;
+      color: #c2bfbc;
+    }
+
+    &:after {
+      content: '/';
+      font-size: .8em;
+      color: #c2bfbc;
+    }
+  }
+  
+  p {
+    margin-top: 1em;
+    margin-bottom: 1.4em;
+    line-height: 1.75;
+  }
+  
+  ul,
+  ol {
+    margin-top: 1em;
+    margin-left: 1.1em;
+    margin-bottom: 1.4em;
+  }
+  
+  ul {
+    list-style-type: disc;
+  }
+  
+  ol {
+    list-style-type: decimal;
+  }
+  
+  ul ul,
+  ol ul {
+    margin: 0 0 0 1.6em;
+    list-style-type: circle;
+  }
+  
+  li {
+    margin-top: .3em;
+    margin-bottom: .3em;
+    line-height: 1.75;
+    
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  
+  a {
+    color: $color-neon-blue;
+    text-decoration: underline;
+  }
+  
+  table {
+    border-bottom: 1px solid #e1e4e6;
+    margin-top: 1em;
+    margin-bottom: 1.4em;
+    
+    thead {
+      background-color: $color-light-gray;
+    }
+    
+    th {
+      font-weight: 400;
+    }
+    
+    th, td {
+      padding: .6em 1.1em;
+      border-top: 1px solid #e1e4e6;
+    }
+  }
+
+  input[type="checkbox"] {
+    margin-right: .35em;
+    margin-bottom: .4em;
+  }
+}

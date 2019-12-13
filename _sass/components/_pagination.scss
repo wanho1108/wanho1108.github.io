@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/*=
+  @group Components
+  @name Pagination
+  @author wanho1108 <wanho1108@gmail.com>
+  @since 2019-04-15
+*/
+
+.pagination {
+  margin-top: 3.75em;
+  text-align: center;
+}
+
+.pagination__wrapper {
+  display: inline-block;
+  position: relative;
+  padding-right: 9em;
+  padding-left: 9em;
+}
+
+.pagination__list {
+  font-size: 0;
+}
+
+.pagination__listitem {
+  display: inline-block;
+  margin-right: .3125em;
+  margin-left: .3125em;
+  font-size: 1rem;
+}
+
+.pagination__listitem---ellipsis {
+  padding: .75em 1em;
+}
+
+.pagination__anchor {
+  display: inline-block;
+  padding: .75em 1em;
+  color: #495057;
+  
+  &:hover {
+    color: $color-neon-blue;
+  }
+  
+  &[aria-current="true"] {
+    border-radius: .25em;
+    background-color: $color-light-gray;
+    color: #495057;
+  }
+  
+  &.is-disabled {
+    color: #7e8690;
+  }
+}
+
+.pagination__anchor--prev,
+.pagination__anchor--next {
+  position: absolute;
+  top: 0;
+  width: 7em;
+  box-sizing: border-box;
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.pagination__anchor--prev {
+  left: 0;
+}
+
+.pagination__anchor--next {
+  right: 0;
+}
