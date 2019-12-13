@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post-view">
+  <header class="post-view__header">
+    <h2 itemprop="name headline" class="post-view__subject">{{ page.title | escape }}</h2>
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" class="post-view__time">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {{ page.date | date: date_format }}
+    </time>
+  </header>
+  <section class="post-view__content" itemprop="articleBody">    
+    {{ content | replace: '
+    <li>[ ]', '</li>
+    <li class="box">' | replace: '</li>
+    <li>[X]', '</li>
+    <li class="box_done">' }}</li>
+  </section>
+</article>

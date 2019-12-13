@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  {%- include head.html -%}
+  <body>
+    <nav role="navigation" class="skip-navigation">
+      <h1 class="is-blind">컨텐츠 건너뛰기</h1>
+      <ul class="skip-navigation__listbox">
+        <li class="skip-navigation__item">          
+          <a href="#content" class="skip-navigation__anchor">본문 바로가기</a>
+        </li>
+        <li class="skip-navigation__item">
+            <a href="#navigation" class="skip-navigation__anchor">메뉴 바로가기</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      {%- include header.html -%}
+      <main id="content" role="main" aria-label="본문" class="content">
+        <div class="content__wrapper">
+          {{ content }}
+        </div>
+      </main>
+      {%- include footer.html -%}
+    </div>
+    <script>
+      'use strict';
+      /* 뒤로가기 */
+      var $historyButton = document.querySelector('.js-history-button');      
+      if ($historyButton) {
+        $historyButton.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var historyURL = document.referrer;
+          if (historyURL.indexOf(window.location.origin) === -1 || historyURL.length === 0) {
+            window.location.href = '/';
+          } else {
+            window.history.back();
+          }
+        });
+      }
+    </script>
+    {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+    {%- endif -%}
+  </body>
+</html>

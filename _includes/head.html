@@ -1,0 +1,32 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    {%- if page.layout == 'article-view' -%}
+      {{ page.title }} - {{ site.title }}
+    {%- else -%}
+      {{ site.title }}
+    {%- endif -%}
+  </title>
+  <meta name="google-site-verification" content="YEqNzpI3tTajAnEr6cgU1aOCFYGAIckboglKeJosT_k">
+  <meta content="{{ site.title }}" property="og:site_name">
+  <meta content="{{ page.title }}" property="og:title">
+  <meta content="
+    {%- if page.title == 'article-view' -%}
+      article
+    {%- else -%}
+      website
+    {%- endif -%}" property="og:type">
+  {%- if page.title -%}
+    <meta content="{{ page.summary | truncate: 100 }}" property="og:description">
+  {%- endif -%}
+    <meta content="{{ site.url }}{{ site.baseUrl }}{{ page.url }}" property="og:url">
+  {%- if page.title -%}
+    <meta content="{{ page.date }}" property="article:published_time">
+  {%- endif -%}
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/x-icon" href="/assets/image/favicon.ico">
+  <link rel="stylesheet" href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+</head>

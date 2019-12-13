@@ -1,0 +1,25 @@
+<header class="header" role="banner">
+  <div class="header__wrapper">
+    {%- if page.layout == 'article-view' -%}
+      <h1 class="header__site-logo is-blind">{{ site.title }}<span aria-hidden="true">(</span></h1>
+      <button type="button" class="header__button header__button--history js-history-button">
+        <span class="is-blind">뒤로가기</span>
+      </button>
+    {%- else -%}
+      <h1 class="header__site-logo">
+        <a href="/" rel="author" class="header__site-logo-anchor">{{ site.title }}<span aria-hidden="true">(</span></a>
+      </h1>
+    {%- endif -%}
+    <nav id="navigation" class="header__navigation">
+      <h2 class="is-blind">메인 메뉴</h2>
+      <ul class="header__navigation-list">
+        <li class="header__navigation-listitem">
+          <a href="/" aria-current="page" class="header__navigation-anchor">Post</a>
+        </li>
+        <li class="header__navigation-listitem">
+          <a href="https://github.com/wanho1108" target="_blank" class="header__navigation-anchor">Github</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,77 @@
+---
+layout: default
+---
+<div class="post-list">
+    <h2 class="is-blind">{{ page.list_title | default: "게시글 목록" }}</h2>
+    <ul class="post-list__list">
+      {%- for post in paginator.posts -%}
+        <li class="post-list__listitem">
+        {%- assign date_format = site.minima.date_format | default: "%b %d, %Y" -%}
+        <h3 class="post-list__subject">
+            <a href="{{ post.url | relative_url }}" class="post-list__subject-anchor">
+            {{ post.title | escape }}
+            </a>
+        </h3>
+        <p class="post-list__summary">{{ post.summary }}</p>
+        <time datetime="{{ post.date }}" aria-label="작성일: {{ post.date | date: date_format }}" class="post-list__time">{{ post.date | date: date_format }}</time>
+        </li>
+      {%- endfor -%}
+    </ul>
+    {% if paginator.total_pages > 1 %}    
+      {% assign start = paginator.page | minus: 2 %}
+      {% assign end = paginator.page | plus: 2 %}  
+      {% if start < 1 %}
+        {% assign start = 1 %}
+        {% assign end = start | plus: 4 %}
+      {% elsif end > paginator.total_pages %}
+        {% assign start = paginator.total_pages | minus: 4 %}
+        {% assign end = paginator.total_pages %}
+      {% endif %}    
+      {% if start < 1 %}
+        {% assign start = 1 %}
+      {% endif %}    
+      {% if end > paginator.total_pages %}
+        {% assign end = paginator.total_pages %}
+      {% endif %}  
+      <nav class="pagination">
+        <div class="pagination__wrapper">
+        <h2 class="is-blind">게시글 페이지 목록</h2>
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="이전 페이지 보기" class="pagination__anchor pagination__anchor--prev">이전 페이지</a>
+        {% else %}
+          <span role="link" aria-disabled="true" aria-label="이전 페이지 보기" class="pagination__anchor pagination__anchor--prev is-disabled">이전 페이지</span>
+        {% endif %}
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="다음 페이지 보기" class="pagination__anchor pagination__anchor--next">다음 페이지</a>
+        {% else %}
+          <span role="link" aria-disabled="true" aria-label="다음 페이지 보기" class="pagination__anchor pagination__anchor--next is-disabled">다음 페이지</span>
+        {% endif %}
+        <ul class="pagination__list">
+          {% if start > 1 %}
+            <li class="pagination__listitem">
+              <a href="{{ site.baseurl }}/" aria-label="1번 페이지 보기" class="pagination__anchor">1</a>
+            </li>
+            <li role="none" aria-label="게시글 페이지 번호 중략" class="pagination__listitem pagination__listitem---ellipsis">&middot;&middot;&middot;</li>
+          {% endif %}  
+          {% for page in (start..end) %}
+            <li class="pagination__listitem">
+              {% if page == paginator.page %}
+                <em role="link" aria-disabled="true" aria-label="{{ page }}번 페이지 보기" aria-current="true" class="pagination__anchor">{{ page }}</em>
+              {% elsif page == 1 %}
+                <a href="{{ site.baseurl }}/" aria-label="1번 페이지 보기" class="pagination__anchor">1</a>
+              {% else %}
+                <a href="{{ site.baseurl }}/page{{ page }}" aria-label="{{ page }}번 페이지 보기" class="pagination__anchor">{{ page }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}  
+          {% if end < paginator.total_pages %}
+            <li role="none" aria-label="게시글 페이지 번호 중략" class="pagination__listitem pagination__listitem---ellipsis">&middot;&middot;&middot;</li>
+            <li class="pagination__listitem">
+              <a href="{{ site.baseurl }}/page{{ paginator.total_pages }}" aria-label="{{ paginator.total_pages }}번 페이지 보기" class="pagination__anchor">{{ paginator.total_pages }}</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+  {% endif %}
+</div>
