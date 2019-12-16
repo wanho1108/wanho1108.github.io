@@ -1,6 +1,6 @@
 ---
 layout: article-view
-category: post
+categories: post
 title:  DocumentFragment로 리플로우 최소화
 summary: summary 내용 삽입
 date:   2019-12-02 10:40:00 +0900

@@ -1,6 +1,6 @@
 ---
 layout: article-view
-category: post
+categories: post
 title:  모바일 웹 접근성 실패 사례
 summary: summary 내용 삽입
 date:   2019-12-12 10:40:00 +0900

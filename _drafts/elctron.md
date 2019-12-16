@@ -1,6 +1,6 @@
 ---
 layout: article-view
-category: post
+categories: post
 title:  일렉트론으로 데스크탑 앱 만들기
 summary: summary 내용 삽입
 date:   2019-12-12 10:40:00 +0900
