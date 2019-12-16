@@ -1,8 +1,8 @@
 ---
 layout: article-view
 categories: post
-title:  Jekyll Paginate V2 적용 실패 사례
-summary: summary 내용 삽입 해주세요.
+title:  "Jekyll Paginate V2 적용 실패 사례"
+summary: "summary 내용 삽입 해주세요."
 date:   2019-12-12 10:40:00 +0900
 ---
 
@@ -44,11 +44,29 @@ pagination:
     after: 2        
 ```
 
+## 파일 생성
+
+today-i-learned 생성하기
+
+```markdown
+---
+layout: article-list
+permalink: /today-i-learned/
+pagination: 
+  enabled: true
+  category: today-i-learned
+---
+```
+
+
 ## 코드 변경
 
 {% raw %}
 ```html
-... raw if else endif 에러 나는거 확인하기
+# todo
+- raw if else endif 에러 나는거 확인하기
+- 목록 출력도 같이 적어주기
+
 {% if paginator.total_pages > 1 %}
 <ul>
   {% if paginator.previous_page %}

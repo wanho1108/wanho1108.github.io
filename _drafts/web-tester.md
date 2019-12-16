@@ -1,6 +1,6 @@
 ---
 layout: article-view
-title:  모바일 웹 접근성 경험기
+title:  "모바일 웹 접근성 경험기"
 date:   2019-05-06 12:06:41
 categories: post
 ---
