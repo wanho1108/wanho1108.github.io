@@ -2,7 +2,7 @@
 layout: article-view
 categories: post
 title:  "DocumentFragment로 리플로우 최소화"
-summary: "summary 내용 삽입"
+summary: "DocumentFragment는 Document의 경량화된 버전으로 여러 노드로 이루어진 문서의 구조를 담을 수 있지만 활성화된 문서 트리의 일부가 아니기 때문에 문서에 영향을 주지 않고 리플로우를 발생하지 않으며 성능에 큰 영향을 미치지 않습니다."
 date:   2019-12-02 10:40:00 +0900
 ---
 
