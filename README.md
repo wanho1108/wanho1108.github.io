@@ -12,7 +12,7 @@ gem install jekyll bundler
 bundle install
 
 # jekyll 실행
-bundle exec jekyll server --drafts
+bundle exec jekyll server
 
 # jekyll drafts 실행
 bundle exec jekyll server --drafts
